@@ -1,0 +1,70 @@
+body, html {
+    height:100%;
+    margin:0;
+    line-height: 1.8em;
+    color:#666;
+  }
+.tausta_1, .tausta_2, .tausta_3 {
+    position:relative;
+    opacity: 0.70;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /*  background-attachment=fixed aiheuttaa backgroudin pysvän paikallaan
+        background-attachment=scroll muuttaa sen scrollattavaksi */
+    background-attachment: fixed; 
+}
+.tausta_1 {
+    background-image:url('../Images/City_1.jpg');
+    min-height: 100%;
+}
+.tausta_2 {
+    background-image:url('../Images/City_2.jpeg');
+    min-height: 400px;
+}
+.tausta_3 {
+    background-image:url('../Images/City_3.jpeg');
+    min-height: 400px;
+}
+.osa_1, .osa_2, osa_3{
+    text-align: center;
+    padding: 50px 80px;
+}
+.text_1{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    text-justify: auto;
+    color: black;
+    font-size: 27px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+.text_1 .reuna{
+    background-color: #111;
+    color:white;
+    padding: 20px;
+}
+.text_2{
+    position: absolute;
+    top: 60%;
+    width: 100%;
+    text-align: center;
+    text-justify: auto;
+    color: white;
+    font-size: 20px;
+    letter-spacing: 8px;
+}
+.text_2 .reuna{
+    background-color: #111;
+    color:white;
+    padding: 10px;
+}
+
+/* If the window is less than 800px wide, the backgruond pictures will scroll */
+@media (max-width:800px) {
+    .tausta_1, .tausta_2, .tausta_3 {
+        background-attachment: scroll;
+    }
+}

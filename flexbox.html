@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Flexbox</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /*Alle 768px ei käytetä Floexbox ominaisuutta. */
+        @media(min-width:768px) {
+            .joustava {
+                display: flex;
+                align-items: center;
+            }
+
+            .toinen {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .kolmas {
+                display: flex;
+                flex-wrap: wrap;
+            }
+        }
+
+        .joustava div,
+        .toinen div,
+        .kolmas div {
+            border: 1px #ccc solid;
+            padding: 1em;
+        }
+
+        .box-1 {
+            flex: 2;
+            order: 2;
+            background-color: rgba(200, 100, 0, 0.623);
+        }
+
+        .box-2 {
+            flex: 1;
+            order: 1;
+            background-color: rgba(235, 81, 176, 0.61);
+        }
+
+        .box-3 {
+            flex: 1;
+            order: 3;
+            background-color: rgba(31, 221, 196, 0.486);
+        }
+
+        .box-4 {
+            width: 25%;
+            background-color: rgba(39, 240, 106, 0.63);
+        }
+
+        .box-5 {
+            width: 300px;
+            background-color: rgba(13, 163, 233, 0.452);
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="index.html">Index</a> |
+
+        <a href="home.html">Home</a> |
+    </nav>
+    <div class="joustava">
+        <div class="box-1">
+            <p>Lorem Box 1 ipsum dolor sit amet, consectetur adipisicing elit. Illo earum quidem quo molestiae cumque
+                pariatur asperiores vel eos veritatis numquam blanditiis, eveniet accusamus at minima!</p>
+        </div>
+        <div class="box-2">
+            <p>Lorem Box 2. Alle 768px ei käytetä Flexbox ominaisuutta. Ipsum dolor sit amet, consectetur adipisicing
+                elit. Illo earum quidem quo molestiae cumque pariatur asperiores vel eos veritatis numquam blanditiis,
+                eveniet accusamus at minima necessitatibus a voluptates incidunt ex!</p>
+        </div>
+        <div class="box-3">
+            <p>Lorem Box 3 ipsum dolor sit amet, consectetur adipisicing elit. Illo earum quidem quo molestiae cumque
+                pariatur asperiores vel eos veritatis numquam blanditiis, eveniet accusamus at minima necessitatibus a
+                voluptates incidunt ex!</p>
+        </div>
+    </div>
+    <div class="toinen">
+        <div class="box-4">
+            <p>Lorem Box 4 ipsum dolor sit amet, consectetur adipisicing elit. Illo earum quidem quo molestiae cumque
+                pariatur asperiores vel eos veritatis numquam blanditiis, eveniet accusamus at minima!</p>
+        </div>
+        <div class="box-4">
+            <p>Lorem Box 5 ipsum dolor sit amet, consectetur adipisicing elit. Illo earum quidem quo molestiae cumque
+                pariatur asperiores vel eos veritatis numquam blanditiis, eveniet accusamus at minima necessitatibus a
+                voluptates incidunt ex!</p>
+        </div>
+        <div class="box-4">
+            <p>Lorem Box 6 ipsum dolor sit amet, consectetur adipisicing elit. Illo earum quidem quo molestiae cumque
+                pariatur asperiores vel eos veritatis numquam blanditiis, eveniet accusamus at minima necessitatibus a
+                voluptates incidunt ex!</p>
+        </div>
+    </div>
+    <div class="kolmas">
+        <div class="box-5">
+            <p>Lorem Box 7 ipsum dolor sit amet, consectetur adipisicing elit. Illo earum quidem quo molestiae cumque
+                pariatur asperiores vel eos veritatis numquam blanditiis, eveniet accusamus at minima!</p>
+        </div>
+        <div class="box-5">
+            <p>Lorem Box 8 ipsum dolor sit amet, consectetur adipisicing elit. Illo earum quidem quo molestiae cumque
+                pariatur asperiores vel eos veritatis numquam blanditiis, eveniet accusamus at minima necessitatibus a
+                voluptates incidunt ex!</p>
+        </div>
+        <div class="box-5">
+            <p>Lorem Box 9 ipsum dolor sit amet, consectetur adipisicing elit. Illo earum quidem quo molestiae cumque
+                pariatur asperiores vel eos veritatis numquam blanditiis, eveniet accusamus at minima necessitatibus a
+                voluptates incidunt ex!</p>
+        </div>
+        <div class="box-5">
+            <p>Lorem Box 10 ipsum dolor sit amet, consectetur adipisicing elit. Illo earum quidem quo molestiae cumque
+                pariatur asperiores vel eos veritatis numquam blanditiis, eveniet accusamus at minima necessitatibus a
+                voluptates incidunt ex!</p>
+        </div>
+        <div class="box-5">
+            <p>Lorem Box 11 ipsum dolor sit amet, consectetur adipisicing elit. Illo earum quidem quo molestiae cumque
+                pariatur asperiores vel eos veritatis numquam blanditiis, eveniet accusamus at minima necessitatibus a
+                voluptates incidunt ex!</p>
+        </div>
+        <div class="box-5">
+            <p>Lorem Box 12 ipsum dolor sit amet, consectetur adipisicing elit. Illo earum quidem quo molestiae cumque
+                pariatur asperiores vel eos veritatis numquam blanditiis, eveniet accusamus at minima necessitatibus a
+                voluptates incidunt ex!</p>
+        </div>
+        <div class="box-5">
+            <p>Lorem Box 13 ipsum dolor sit amet, consectetur adipisicing elit. Illo earum quidem quo molestiae cumque
+                pariatur asperiores vel eos veritatis numquam blanditiis, eveniet accusamus at minima necessitatibus a
+                voluptates incidunt ex!</p>
+        </div>
+        <div class="box-5">
+            <p>Lorem Box 14 ipsum dolor sit amet, consectetur adipisicing elit. Illo earum quidem quo molestiae cumque
+                pariatur asperiores vel eos veritatis numquam blanditiis, eveniet accusamus at minima necessitatibus a
+                voluptates incidunt ex!</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

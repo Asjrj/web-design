@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid</title>
+  <style>
+    .wrapper {
+      display: grid;
+      /* grid-template-columns: 33% 33% 33%; */
+      /* grid-template-columns:repeat(4, 1fr);*/
+      grid-template-columns: 1fr 2fr 1fr;
+      grid-column-gap: 1em;
+      grid-row-gap: 2em;
+      grid-auto-rows: minmax(100px, auto);
+    }
+
+    .wrapper>div {
+      background: #eee;
+      padding: 1em;
+    }
+
+    .wrapper>div:nth-child(odd) {
+      background: #ddd;
+    }
+
+    .nested {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 1em;
+    }
+
+    .nested>div {
+      border: #333 1px solid;
+      padding: 1em;
+    }
+
+    .wide {
+      grid-column: 2/4;
+      /* Spans from column line 2 to line 4*/
+      grid-row: 2/4;
+      /* Spans from row line 2 to line 4*/
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <h3>Grid esimerkki</h3>
+    <a href="index.html">Index</a> |
+    <a href="home.html">Home</a> |
+  </nav>
+
+  <div class="wrapper">
+    <div>Lorem 1, ipsum dolor sit amet consectetur adipisicing elit. Numquam laudantium harum, distinctio ratione
+      dignissimos quos, sed amet assumenda quas maxime iusto maiores debitis, culpa repellat eveniet omnis quod enim
+      impedit.</div>
+    <div>Lorem 2, ipsum dolor sit amet consectetur adipisicing elit. Numquam laudantium harum, distinctio ratione
+      dignissimos quos, sed amet assumenda quas maxime iusto maiores debitis, culpa repellat eveniet omnis quod enim
+      impedit.</div>
+    <div>Lorem 3, ipsum dolor sit amet consectetur adipisicing elit. Numquam laudantium harum, distinctio ratione
+      dignissimos quos, sed amet assumenda quas maxime iusto maiores debitis, culpa repellat eveniet omnis quod enim
+      impedit. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam laudantium harum, distinctio ratione
+      dignissimos quos, sed amet assumenda quas maxime iusto maiores debitis, culpa repellat eveniet omnis quod enim
+      impedit.</div>
+    <div class="nested">
+      <div>Lorem 4.1 , ipsum dolor.</div>
+      <div>Lorem 4.2 , ipsum dolor.</div>
+      <div>Lorem 4.3, ipsum dolor.</div>
+    </div>
+    <div class="wide">Lorem 5, ipsum dolor sit amet consectetur adipisicing elit. Numquam laudantium harum, distinctio
+      ratione dignissimos quos, sed amet assumenda quas maxime iusto maiores debitis, culpa repellat eveniet omnis quod
+      enim impedit.</div>
+    <div>Lorem 6, ipsum dolor sit amet consectetur adipisicing elit. Numquam laudantium harum, distinctio ratione
+      dignissimos quos, sed amet assumenda quas maxime iusto maiores debitis, culpa repellat eveniet omnis quod enim
+      impedit.</div>
+  </div>
+
+</body>
+
+</html>

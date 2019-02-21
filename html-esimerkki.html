@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fi-fi">
+
+<head>
+    <title>HTML Esimerkki</title>
+    <meta charset="UTF-8"> <!-- Ääkköset saadaan näkymään -->
+    <meta name="description" content="Free Web tutorials">
+    <meta name="keywords" content="Porakone, Kissa, Tulipalo">
+    <meta name="author" content="John Doe">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- JavaSript should be placed here in the <head> -->
+    <!-- Internal styling also here - prepere CSS -->
+</head>
+<!-- Tässä tiedostossa on yksinkertaisia HTML esimerkkejä. CSS esimerkki löytyy tiedostosta: cssesimerkki.html -->
+
+<body>
+    <nav>
+        <a href="index.html">Index</a> |
+        <a href="home.html">Home</a> |
+    </nav>
+    <h2>This is a H2 Header</h2>
+    <h4 style="color:red; border:2px solid Tomato">This is a plain HTML page with no CSS styling</h4>
+    <a href="index.html" title="I'm a tooltip">Index</a>
+    <h5 id="kirjanmerkki_1">Tämän tekstin id toimii kirjan merkkinä. Sivun alalaidassa on linkki takaisin tänne.</h5>
+    <p>Lorem, ipsum sit amet
+        <a href="http://google.com" target="_blank">This is a link</a> adipisicing elit.
+            <b> - Bold text </b> Vel atque
+            <strong> - Important text </strong>atque doloribus
+            <i> - Italic text </i>repellendus dolorem.
+            <em> - Emphasized text </em> Vero vitae
+            <mark> - Marked text </mark>nisi rem.
+            <small> - Small text </small>Veniam sequi,
+            <del> - Deleted text </del>ducimus
+            <ins> - Inserted text </ins>officia corrupti
+            <sub> - Subscript text </sub>alias temporibus
+            <sup> - Superscript text </sup>est inventore, maxime, repellendus cum reprehenderit?
+    </p>
+    <p>Here is a quote from WWF's website:</p>
+    <blockquote cite="http://www.worldwildlife.org/who/index.html">
+    For 50 years, WWF has been protecting the future of nature.
+    The world's leading conservation organization,
+    WWF works in 100 countries and is supported by
+    1.2 million members in the United States and
+    close to 5 million globally.
+    </blockquote>
+    <p> Seuraava on myös quotation:
+        <q> The q -element defines a short quotation.
+            Browsers usually insert quotation marks around it.
+        </q>
+    </p>
+    <bdo dir="rtl">This text is written from right to left</bdo>
+
+
+    <!-- Unordered list is usually used for web site navigation-->
+    <ul>
+        <li>List Item 1</li>
+        <li>List Item 2</li>
+    </ul>
+    <!-- Ordered list -->
+    <ol>
+        <li>List Item 1</li>
+        <li>List Item 2</li>
+    </ol>
+    <!-- Tables should not be used for layout -->
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Address</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Nimi 1</td>
+                <td>Osoite 1</td>
+            </tr>
+            <tr>
+                <td>Nimi 2 on pitempi</td>
+                <td>Osoite 2 on pitempi</td>
+            </tr>
+        </tbody>
+    </table>
+    <br> <!-- This is s line break -->
+    <hr> <!--  This is a Horizontal rule-->
+    <br>
+    <!-- Forms -->
+    <form action="index.html">
+        <div>
+            <label>Kirjoita tähän nimesi</label>
+            <input type="text" name="etuNimi" placeholder="Tämä teksti häviää">
+        </div>
+        <div>
+            <label>Sähköposti</label>
+            <input type="email" name="posti" value="@company.com">
+        </div>
+        <div>
+            <label>Jätä viesti</label>
+            <textarea name="viesti" id="" cols="30" rows="10"></textarea>
+        </div>
+        <div>
+            <label>Valitse</label>
+            <select name="valinta" id="">
+                <option value="value_1">Valinta 1</option>
+                <option value="value_2">Valinta 2</option>
+            </select>
+        </div>
+        <input type="submit" name="nappi1" value="Paina ja siirry etusivulle">
+    </form>
+    <button type="button" onclick="document.getElementById('demo').innerHTML = Date()">
+        JavaScript to display Date and Time</button>
+    <p id="demo"></p>
+    <br>
+    <!-- Images -->
+    <a href="Images/Lintu.PNG"> <!-- Image as a link -->
+        <img style="width:42px;height:42px;" src="Images/Lintu.PNG" alt="Pikkulintu">
+    </a>
+    <a>Kuva on linkki. (The alt attribute specifies an alternative text to be used, when an image cannot be displayed. Use the HTML <img>'s element usemap attribute to point to an image-map)</a>
+    <hr>
+    <picture> <!-- Näytetään Hanhi, jos leveys on suurempi kuin 600 -->
+        <source media="(min-width: 600px)" srcset="Images/Hanhi.jpg">
+        <img src="Images/Lintu.PNG" style="border-radius: 8px; width:auto; box-shadow: 10px 10px lightgray;">
+    </picture>
+    <br><br><br>
+
+    <table style="width:60%; border-style: dashed;">
+    <caption>Caption element to define a table caption</caption>
+    <tr>
+        <th style="border: 1px solid black">Firstname (border=1)</th>
+        <th>Lastname</th>
+        <th> Age (heading)</th>
+    </tr>
+    <tr>
+        <td style="padding: 10px">Jill (padding=10)</td>
+        <td>Smith</td>
+        <td>50 (data)</td>
+    </tr>
+    <tr>
+        <td>Eve</td>
+        <td>Jackson</td>
+        <td>94</td>
+    </tr>
+    </table>
+
+    <!-- Quotations -->
+    <p> Abbreviation
+        <abbr title="World Wide Web">WWW</abbr> is great!
+    </p>
+    <div style="height:200px; background:red; background: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);">
+    </div>
+    <a href="#kirjanmerkki_1">Tästä pääsee siirtymään sivun ylälaitaan.</a>
+    <br>
+
+</body>
+</html>

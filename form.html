@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Form esimerkki</title>
+    <meta charset="UTF-8"> <!-- Ääkköset saadaan näkymään -->
+</head>
+
+<body>
+    <h1>Form:n ryhmittely Fieldsetin avulla</h1>
+    <form action="/joku_toiminto.js" method="get" autocomplete="on">
+        <!-- Get on default method-->
+        <fieldset>
+            <legend>Tämä on Legend</legend>
+            First name:<br>
+            <input type="text" name="firstname" value="Mickey" readonly> <!-- Ei voi muuttaa -->
+            <br>
+            Last name:<br>
+            <input type="text" name="lastname" placeholder="Last name" autofocus>
+            <!-- Sivua avattaessa focus siirtyy tähän-->
+            <br><br>
+            <input type="submit" value="Submit">
+            <input type="reset">
+            <button type="button" onclick="alert('Hello World!')">Alert</button>
+        </fieldset>
+    </form>
+
+    <form action="/joku_toiminto.js" method="get">
+        <!-- Get on default method-->
+        <fieldset>
+            <legend>Form elements</legend>
+            <div style="float:left">
+                <input type="radio" name="gender" value="foot" checked> On Foot<br>
+                <input type="radio" name="gender" value="bike" disabled> Bicycle<br>
+                <input type="radio" name="gender" value="moto"> Motorbike
+            </div>
+            <div>
+                <input type="checkbox" name="vehicle1" value="Bike"> Car<br>
+                <input type="checkbox" name="vehicle2" value="Car"> Bus
+            </div>
+            <select name="cars" size="2">
+                <option value="volvo">Volvo</option>
+                <option value="saab" selected>Saab</option><!-- valittu -->
+                <option value="fiat">Fiat</option>
+                <option value="audi">Audi</option>
+            </select>
+            <textarea name="message" rows="5" cols="20">Tähän voi kirjoittaa tekstiä
+        </textarea>
+            <input list="browsers" name="browser" required><!-- Pakko täyttää -->
+            <datalist id="browsers">
+                <option value="Internet Explorer">
+                <option value="Firefox">
+                <option value="Chrome">
+                <option value="Opera">
+                <option value="Safari">
+            </datalist>
+            Progress: <progress value="22" max="100"></progress>
+            <p>Display a gauge:</p>
+            <meter value="2" min="0" max="10">2 out of 10</meter><br>
+            <meter value="0.6">60%</meter>
+        </fieldset>
+    </form>
+    <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+        <fieldset>
+            <legend>Output element</legend>
+            0
+            <input type="range" id="a" name="a" value="50" step="3">
+            100 +
+            <input type="number" id="b" name="b" value="50">
+            =
+            <output name="x" for="a b"></output>
+        </fieldset>
+    </form>
+
+    <form>
+        <fieldset>
+            <legend>HTML5 Input Types</legend>
+            Select your favorite color:
+            <input type="color" name="favcolor">
+            Birthday (month and year):
+            <input type="month" name="bdaymonth" min="2000-01-02" max="2018-01-05">
+            Birthday:
+            <input type="date" name="bday" min="2000-01-02" max="2018-01-05">
+            Select a time:
+            <input type="time" name="usr_time">
+            Select a week:
+            <input type="week" name="week_year">
+            E-mail:
+            <input type="email" name="email">
+            Add your homepage:
+            <input type="url" name="homepage">
+            Quantity (between 1 and 5):
+            <input type="number" name="quantity" min="1" max="5">
+            <input type="range" name="points" min="0" max="10">
+        </fieldset>
+    </form>
+    <br>
+    <nav>
+        <a href="index.html">Index</a>
+        &nbsp;
+        <a href="home.html">Home</a>
+    </nav>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fi-fi">
+
+<head>
+    <title>Värit</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/layout.css">
+</head>
+
+<body>
+    <div style="width:80%; border:none; margin:auto;">
+        <h2 id="w-rgbText" style="margin-left: 50px;">rgb(255,255,255)</h2>
+        <div class="w-rgb" id="w-rgbDiv" style="background-color:rgb(0,0,0)"></div>
+        <p style="clear:both;"></p>
+        <div class="w-slide">
+            <P>Red</P>
+            <input onchange="changeRGB()" oninput="changeRGB()" type="range" id="slideRed" name="slideRed" value="0"
+                min="0" max="255">
+        </div>
+        <div class="w-slide">
+            <P>Green</P>
+            <input onchange="changeRGB()" oninput="changeRGB()" type="range" id="slideGreen" name="slideGreen" value="0"
+                min="0" max="255">
+        </div>
+        <div class="w-slide">
+            <P>Blue</P>
+            <input onchange="changeRGB()" oninput="changeRGB()" type="range" id="slideBlue" name="slideBLue" value="0"
+                min="0" max="255">
+        </div>
+        <div style="margin:20px; float:left; border:none">
+            <nav>
+                <a href="index.html">Index</a>
+                &nbsp;
+                <a href="home.html">Home</a>
+            </nav>
+        </div>
+    </div>
+    <script>
+        function changeRGB(x) {
+            var col, r, g, b;
+            r = document.getElementById("slideRed").value;
+            g = document.getElementById("slideGreen").value;
+            b = document.getElementById("slideBlue").value;
+            col = "rgb(" + r + "," + g + "," + b + ")";
+            document.getElementById('w-rgbDiv').style.backgroundColor = col;
+            document.getElementById('w-rgbText').innerHTML = col;
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+body {
+    background-color: #f4f4f4;
+    color: green;
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6em;
+    margin: 0;
+}
+
+h1 {
+    color: rgb(150, 50, 50);
+}
+
+.kokoAlueLuokka{
+    width: 80%;
+    margin: auto;
+    padding-top: 20px;
+}
+
+.kokoAlueLuokka h2{
+    font-family: Cambria;
+    color: rgb(0, 150, 150);
+    word-spacing: 1em;
+    text-align: center;
+}
+
+.luokkaYks{
+    background-color: dimgray;
+    color: lightblue;
+    border: 5px solid rgb(200, 0, 0);
+}
+
+.luokkaKaks{
+    border: 3px dotted rgb(0, 100, 200);
+    border-radius: 20px;
+    margin: 10px;
+}
+
+.listaLuokka ul{
+    list-style: upper-alpha;
+}
+
+.formLuokka {
+    padding: 20px;    
+}
+
+.formLuokka label {
+    display: block;    
+}
+
+.formLuokka input{
+    width: 100%;    
+}
+
+.luokkaKolme{
+    float: left;
+    width: 33.3%;
+}
+
+.sanomalehti{
+    column-count: 3;
+    column-gap: 50px;
+    column-rule: 1px solid lightblue;
+}
+
+/* Alle 768 leveydellä muutetaan luokkaKolme -lohkot päällekkäin */
+@media(max-width: 768px){   
+    .luokkaKolme{
+        float: none;
+        width: 100%;
+        }
+}
+ 
+/* On screens that are 992px or less, set the background color to blue */
+@media screen and (max-width: 992px) {
+    body {
+      background-color: tan;
+    }
+}
+  
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+    body {
+      background-color: lightsteelblue;
+    }
+}

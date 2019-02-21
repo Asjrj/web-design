@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Border esimerkki</title>
+    <meta charset="UTF-8"> <!-- Ääkköset saadaan näkymään -->
+    <meta name="description" content="My About page">
+    <meta name="keywords" content="HTML tutorial, company name, something else">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <style type="text/css">
+        #paaOtsikko {
+            text-align: center;
+            background-color: blue;
+            color: azure;
+        }
+        #alaLaita {
+            text-align: center;
+            background-color: blue;
+            color: azure;
+        }
+        #ul_menussa {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333333;
+        }
+        #li_menussa {
+            float: left;
+        }
+        #a_menussa {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 16px;
+            text-decoration: none;
+        }
+        #a_menussa:hover {
+            background-color: #111111;
+        }
+        nav {
+            float: left;
+            max-width: 160px;
+            margin: 0;
+            padding: 1em;
+            border: 1px;
+        }
+        article {
+            margin-left: 170px;
+            border: 1px solid gray;
+            padding: 1em;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <ul id="ul_menussa">
+        <li id="li_menussa"><a id="a_menussa" href="index.html">Index</a></li>
+        <li id="li_menussa"><a id="a_menussa" href="home.html">Home</a></li>
+    </ul>
+    <header id="paaOtsikko">
+        <h3>CSS Box model</h3>
+    </header>
+   
+    <nav>
+        <h4>Sivunavi</h4>
+        <ul style="list-style-type:none; margin:0; padding:0; width:160px;background-color: #f1f1f1;">
+            <li><a href="index.html">Index</a></li>
+            <li><a href="home.html">Home</a></li>
+        </ul>
+    </nav>
+    <article>
+        <h4>Artikkeli</h4>
+            <ul>
+                <li>list item 1</li>
+                <li>list item 2</li>
+            </ul>
+    </article>
+   
+    <br>
+    <div style="border:1px dashed black;">
+        <div style="border:5px solid black; margin:50px; padding:20px;">
+            <a>Tämän alueen border on 5px, margin (sen ulkopuolella) on 50px ja padding (borderin sisäpuolella) on 20px</a>
+        </div>
+    </div>
+
+    <div style="border:1px dashed black;">
+        <a>Ensimmäisen alueen border on 1 dashed</a>
+        <div style="border:1px solid darkblue; margin:50px;">
+            <a>Toisen alueen margin on 50px. Margins are used to create space around elements, outside of the border</a>
+            <div style="border:1px solid red; padding:20px; height:200px">
+                <a>Kolmannen alueen padding on 20px ja korkeus 200px. Padding is used to generate space around an element, inside of border</a>
+            </div>
+        </div>
+    </div>
+    
+    <br>
+    <footer id="alaLaita">
+        <p>Footer Copyright &copy; 2018 minä itse</p>
+    </footer>
+</body>
+</html>

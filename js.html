@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Java Script esimerkki</title>
+    <meta charset="UTF-8"> <!-- Ääkköset saadaan näkymään -->
+    <script src="./js-web.js"></script>
+</head>
+
+<body>
+    <nav>
+        <a href="index.html">Index</a>
+    </nav>
+    <h1>Java Script esimerkkejä</h1>
+    <h4 style="color:red; margin:10px; border:2px solid Tomato; padding: 10px">This page is under construction !</h4>
+    <form onSubmit={handleEventOne()}>
+        <!-- Get on default method-->
+        <fieldset>
+            <legend>Input alue</legend>
+            First name:
+            <input type="text" id="firstname" value="Mickey">
+            <br>
+            Last name:
+            <input type="text" id="lastname" placeholder="Last name" autofocus>
+            <!-- Sivua avattaessa focus siirtyy tähän-->
+            <br><br>
+            <div>
+                <input type="submit" value="Submit">
+                <button type="button" onclick={handleOnClickOne()}>OK</button>
+                <button type="button" onclick={handleOnClickTwo()}>Copy</button>
+            </div>
+            <br>
+            <div>
+                <button type="button" onclick={handleLocalStorage()}>Local Storage</button>
+                <button type="button" onclick={handleCookie()}>Cookie</button>
+            </div>
+        </fieldset>
+    </form>
+    <fieldset>
+        <legend>Tulostusalue</legend>
+        <div id='myArea'>
+            <!-- Tähän tulostetaan muuttamalla myArean innerHTML arvoa -->
+        </div>
+    </fieldset>
+
+</body>
+
+</html>

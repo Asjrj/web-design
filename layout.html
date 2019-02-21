@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fi-fi">
+<head>
+    <title>Layout esimerkki</title>
+    <meta charset="UTF-8"> <!-- Ääkköset saadaan näkymään -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive Web Design -->
+    <link rel="stylesheet" type="text/css" href="css/layout.css"> 
+</head>
+<body>
+    <script>
+    function openSideMenu(){
+        document.getElementById('side-menu').style.width='150px';
+        //document.getElementById('main').style.marginLeft='150px';
+    }
+    function closeSideMenu(){
+        document.getElementById('side-menu').style.width='0px';
+        //document.getElementById('main').style.marginLeft='0px';
+    }
+    </script>
+    <div>
+        <header>Defines a header for a document or a section</header>
+        
+        <nav class="navbar">
+            <span class="open-slide">
+                <a href="#" onclick="openSideMenu()">
+                    <svg width="30" height="30">
+                        <path d="M0,5  30,5"  stroke="#fff" stroke-width="5"/>
+                        <path d="M0,14 30,14" stroke="#fff" stroke-width="5"/>
+                        <path d="M0,23 30,23" stroke="#fff" stroke-width="5"/>
+                    </svg>
+                </a>
+            </span>
+            
+            <ul class="navbar-nav">
+                <li><a href="index.html">Index</a></li>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="form.html">Form</a></li>
+                <li><a href="layout.html">Layout</a></li>
+                <li><a href="border.html">Border</a></li>
+                <li><a href="float.html">Float</a></li>
+                <li><a href="Flexbox.html">Flexbox</a></li>
+            </ul>
+            
+            <div id="side-menu" class="side-nav">
+                <a href="#" class="btn-close" onclick="closeSideMenu()">&times;</a>
+                <a href="index.html">Index</a>
+                <a href="home.html">Home</a>
+                <a href="form.html">Form</a>
+                <a href="layout.html">Layout</a>
+                <a href="border.html">Border</a>
+                <a href="float.html">Float</a>
+                <a href="Flexbox.html">Flexbox</a>
+                
+            </div>
+        
+        </nav>
+        
+        <section>Defines a section in a document</section>
+        <aside>Defines a container for navigation links</aside>
+        <article>Defines an independent self-contained article. Semantic elements do not affect layout.</article>
+        <footer>Defines a footer for a document or a section</footer>
+        <summary>Defines a Summary for details</summary>
+        <details>Defines additional details</details>
+    </div>
+    
+    <h2>Responsive Web Design with Media Queries</h2>
+    <p>Resize the browser window.</p>
+    
+    <div class="left">
+        <p>Left Menu</p>
+    </div>
+    <div class="main">
+        <p>Main Content</p>
+    </div>
+    <div class="right">
+        <p>Right Content</p>
+    </div>
+    
+    <div class="laatikko" style="background-color:coral;"></div>
+    <div class="laatikko" style="background-color:lightblue;"></div>
+    <div class="laatikko" style="background-color:khaki;"></div>
+    <div class="laatikko" style="background-color:pink;"></div>
+    <div class="laatikko" style="background-color:lightgrey;"></div>
+    <div class="laatikko" style="background-color:coral;"></div>
+    <div class="laatikko" style="background-color:lightblue;"></div>
+    <div class="laatikko" style="background-color:khaki;"></div>
+    <div class="laatikko" style="background-color:pink;"></div>
+    <div class="laatikko" style="background-color:lightgrey;"></div>
+
+    <!-- Float left pitää lopettaa clear tyylillä 'both' joko näin tai sitten css:ssä kts .w-uusi-->
+    <p style="clear:both;"></p> 
+
+    <div class="w-uusi" style="background-color:red;"><a>clear:both</a></div>
+    <div class="w-colors" style="background-color:lightblue;"></div>
+    <div class="w-colors" style="background-color:lightcoral;"></div>
+    <div class="w-uusi" style="background-color:red;"><a>clear:both</a></div>
+    <div class="w-colors" style="background-color:lightcyan;"></div>
+    <div class="w-colors" style="background-color:lightgreen;"></div>
+
+    <div style="margin:20px; float:left; border:none">
+        <a href="index.html">Index</a>
+    </div>
+</body>
+</html>
